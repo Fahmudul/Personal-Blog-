@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
 const Navbar = () => {
+  // Navlink
   const navLink = [
     {
       name: "Home",
