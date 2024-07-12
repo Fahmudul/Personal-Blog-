@@ -12,7 +12,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    blog();
+    try {
+      blog();
+    } catch (error) {
+      console.log(error);
+      return [];
+    }
   }, []);
   console.log(blogs);
   return (

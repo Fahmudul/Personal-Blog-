@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className="flex justify-between gap-3 items-center pt-10">
       <div className="">
         <Image
-          src={"/logo.png"}
+          src={"/Logo.png"}
           alt="Logo"
           width={250}
           height={600}
