@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     blog();
   }, []);
-
+  console.log(blogs);
   return (
     <main className="container mx-auto">
       <Navbar />
