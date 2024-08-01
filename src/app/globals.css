@@ -66,4 +66,10 @@
     body {
       @apply bg-background text-foreground;
     }
+    /* .bgImage{
+      background-image: url("../../public/F2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    } */
   }
