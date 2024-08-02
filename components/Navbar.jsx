@@ -24,7 +24,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="flex justify-between gap-3 items-center pt-10">
+    <div className="flex justify-between gap-3 items-center pt-10 text-white">
       <div className="">
         <Image
           src={"/Logo.png"}
@@ -38,11 +38,11 @@ const Navbar = () => {
         <nav>
           <ul className="flex gap-5 relative">
             {navLink.map((link) => (
-              <li
-                key={link.name}
-                className="before:content-[''] relative before:absolute before:bottom-0 before:w-0 before:hover:w-[30px] before:transition-all before:duration-300 before:bg-black before:text-white before:h-[2px]"
-              >
-                <Link href={link.link} className="">
+              <li key={link.name} className="">
+                <Link
+                  href={link.link}
+                  className="text-[#2c8ca1] before:[content-'']  before:w-0 relative before:absolute   before:hover:w-[60%] before:transition-all before:duration-500   before:bg-[#246473] before:h-[2px] before:-bottom-2"
+                >
                   {link.name}
                 </Link>
               </li>
@@ -52,7 +52,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <Input type="text" placeholder="Search" />
-        <CiSearch className="text-3xl ml-3 rounded-full hover:scale-105 transition-all duration-300" />
+        <CiSearch className="text-3xl ml-3 rounded-full hover:scale-105 transition-all duration-500" />
       </div>
     </div>
   );
