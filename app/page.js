@@ -10,6 +10,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa6";
 import PopularCard from "@/components/PopularCard";
+import Categories from "@/components/Categories";
+import MiniCard from "@/components/MiniCard";
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const blog = async () => {
@@ -27,17 +29,25 @@ export default function Home() {
     }
   }, []);
   // console.log(blogs);
+
   return (
     <main className="container mx-auto pb-10">
       <Navbar />
       <Header />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-14">
         {/* Blog Card section*/}
-        <div className=" col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <BigCard />
-          <BigCard />
-          <BigCard />
-          <BigCard />
+        <div className=" col-span-3 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <BigCard />
+            <BigCard />
+            <BigCard />
+            <BigCard />
+          </div>
+          <div className="mt-8 flex justify-center">
+            <button className="bg-secondary text-white px-2 py-1 rounded-md">
+              Load More
+            </button>
+          </div>
         </div>
         <div className="">
           {/* Social Media section*/}
@@ -84,10 +94,10 @@ export default function Home() {
                 height={"100%"}
                 src="https://www.youtube.com/embed/5CSXwb1QdSc?si=7xdCF2BjBrQyXe8i"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className=" mt-4 mb-3"
               ></iframe>
             </div>
@@ -106,6 +116,7 @@ export default function Home() {
             </div>
             <div className="h-3 bg-[#313131]"></div>
           </div>
+          {/* Tags section*/}
           <div className="bg-primary pt-3 mt-5 rounded-md">
             <div className="px-3 text-white mb-4">
               <h3 className="text-2xl font-semibold mt-3 border-b pb-1 border-secondary   inline text-secondary  ">
@@ -124,6 +135,28 @@ export default function Home() {
             </div>
             <div className="h-3 bg-[#313131]"></div>
           </div>
+          {/* Categories section*/}
+          <div className="bg-primary pt-3 mt-5 rounded-md">
+            <div className="px-3 text-white mb-4">
+              <h3 className="text-2xl font-semibold mt-3 border-b pb-1 border-secondary   inline text-secondary  ">
+                Categories
+              </h3>
+              <Categories />
+            </div>
+            <div className="h-3 bg-[#313131]"></div>
+          </div>
+        </div>
+      </div>
+      {/**Recent Blogs */}
+      <div className="mt-10">
+        <h1 className="text-lg text-secondary border-b-2 border-secondary inline pb-1 font-bold">
+          Recent Blogs
+        </h1>
+        <div className="mt-5 grid grid-cols-1 lg:grid-cols-4 gap-4">
+          <MiniCard />
+          <MiniCard />
+          <MiniCard />
+          <MiniCard />
         </div>
       </div>
     </main>
